@@ -1,0 +1,48 @@
+<!--**** Cliente Agenda de Contactos *****
+Author: Francisco Santolalla Quiñonero
+Proyecto: Página del cliente (Front-End) 
+Desde la página el cliente puede:
+    -consultar la agenda de contactos que le devuelva el servidor.
+    -insertar un nuevo cliente en la agenda.
+    -modificar un cliente de la agenda.
+    -eliminar un cliente de la agenda.
+    -buscar clientes por apellido en la agenda.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>Agenda de clientes</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type='application/javascript' src='/js/eventos-jquery.js' ></script>        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body bgcolor='yellow' text='black' link='black' vlink='white'><center>
+        <h1>Agenda de clientes</h1>
+        <hr>
+        <!-- cuerpoMenuPrincipal contenido en este div, lo mostraré solo en la página principal, cuando salga de ella lo ocultaré -->
+        <div id='cuerpoMenuPrincipal'>
+            <table border=1 align="center" cellpadding="15">
+                <tr>    
+                    <TH bgcolor="blue"><div id='mostrar'><h2>Listar Agenda de Clientes</h2></div></TH>
+                    <TH bgcolor="green"><div id='insertar'><h2>Insertar Nuevo Cliente</h2></div></TH>
+                    <TH bgcolor="brown"><div id='modificar'><h2>Modificar Cliente</h2></div></TH>
+                    <TH bgcolor="red"><div id='eliminar'><h2>Eliminar Cliente</h2></div></TH>
+                </tr>
+            </table>   
+            <h2>Buscar clientes en la agenda.</h2>
+            <form>
+                <h3>Bucar por apellido:<input type="text" name="textBuscar" id="textBuscar"/></h3>                
+            </form>
+            <input id = "buttonBuscar" type="submit" value="Buscar"/>  
+        </div>
+        <!-- cuerpo contenido de este div, cuando salga de la página principal mostraré los resultados en este cuerpo -->
+        <div id='cuerpo'> &nbsp;
+        </div> 
+        <!-- En la página principal todos estos botones estarán ocultos, solo los mostraré cuando esté en la página en la que los uso -->
+        <input id = "buttonMenu" type="submit" value="Menu principal"/>
+        <input id = "buttonInsertar" type="submit" value="Insertar" />
+        <input id = "buttonModificar" type="submit" value="Modificar cliente" />
+        <input id = "buttonGuardarCambios" type="submit" value="Guardar cambios" />
+        <input id = "buttonEliminar" type="submit" value="Eliminar" />
+    </center></body>
+</html>
